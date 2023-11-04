@@ -32,7 +32,7 @@ public class AuctionCommand implements CommandExecutor {
 
         Auction.getInstance().getDatabase().addItem(player.getUniqueId(), price, itemStack);
         player.getInventory().setItemInMainHand(null);
-        player.sendMessage(ChatUtil.color("&aYou sold "+(itemStack.getItemMeta().hasDisplayName() ? itemStack.getItemMeta().getDisplayName() : itemStack.getItemMeta().getLocalizedName())+" &afor "+price+"$"));
+        player.sendMessage(ChatUtil.color("&aYou sold "+(itemStack.getItemMeta().hasDisplayName() ? itemStack.getItemMeta().getDisplayName() : itemStack.getType().name().replace("_", " "))+" &afor "+price+"$"));
         return true;
     }
 

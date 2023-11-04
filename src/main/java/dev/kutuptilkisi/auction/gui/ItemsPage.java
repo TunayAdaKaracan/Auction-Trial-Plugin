@@ -118,6 +118,7 @@ public class ItemsPage implements InventoryProvider {
 
         event.getWhoClicked().sendMessage(ChatUtil.color("&aYou bought an item for "+auctionItem.getPrice()+"$"));
         event.getWhoClicked().closeInventory();
+        Auction.getInstance().getDatabase().removeItem(auctionItem.getId());
     }
 
     @Override
