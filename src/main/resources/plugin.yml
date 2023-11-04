@@ -1,0 +1,8 @@
+name: Auction
+version: '${project.version}'
+main: dev.kutuptilkisi.auction.Auction
+api-version: '1.16'
+commands:
+  ah:
+depend:
+  - Vault
